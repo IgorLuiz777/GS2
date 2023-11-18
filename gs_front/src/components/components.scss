@@ -1,0 +1,42 @@
+@import './variaveis.scss';
+
+.content_header {
+    header {
+        nav {
+            ul {
+                text-decoration: none;
+                display: flex;
+                flex-direction: row;
+                margin: 20px;
+                li {
+                    list-style-type: none; 
+                    a {
+                        text-decoration: none;
+                        margin: 20px;
+                        padding: 10px;
+                        color: black;
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                    .login, .cadastro {
+                        margin: 0;
+                        padding: 0;
+                    }
+                    .login {
+                        color: orange;
+                        padding: 10px;
+                    }
+                    .cadastro {
+                        padding: 5px;
+                        background-color: orange;
+                        border-radius: 5px;
+                    }
+                    .cadastro:hover {
+                        transition: .5;
+                        background-color: $color1;
+                    }
+                }                
+            }
+        }
+    }
+}
