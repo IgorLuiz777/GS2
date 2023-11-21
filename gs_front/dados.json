@@ -1,0 +1,27 @@
+{
+    "usuario": [
+      {
+        "id": 1,
+        "nome": "Anibal",
+        "email": "anibal@gmail.com",
+        "cpf": "321.543.123-73",
+        "telefone": "11984737481",
+        "senha": "anibal1234",
+        "vacinas": "",
+        "plano_saude": "",
+        "contatos": ""
+      },
+      {
+        "id": 2,
+        "nome": "Ramon",
+        "email": "ramon@gmail.com",
+        "cpf": "543.323.135-72",
+        "telefone": "11973461974",
+        "senha": "ramondino",
+        "vacinas": "",
+        "plano_saude": "",
+        "contatos": ""
+      }
+    ]
+  }
+  

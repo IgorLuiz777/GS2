@@ -25,7 +25,7 @@
             margin-bottom: 50px;
             text-align: center;
         }
-        label, input {
+        label, input, button {
             display: flex;
             margin: auto;
             font-size: 25px;
@@ -36,7 +36,9 @@
             font-size: 18px;
             margin-bottom: 8px;
         }
-
+        button {
+            margin-top: 15px;
+        }
         input {
             width: 100%;
             padding: 10px;
@@ -49,6 +51,7 @@
             text-decoration: none;
         }
         p {
+            text-align: center;
             margin-top: 10px;
             margin-bottom: 50px;
             font-size: 18px;

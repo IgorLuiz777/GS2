@@ -1,6 +1,7 @@
 
 import Link from 'next/link'
 import './cadastro.scss'
+import Button from '@/components/button'
 
 export default function Cadastro() {
 
@@ -28,7 +29,7 @@ export default function Cadastro() {
                         <label htmlFor="password">Senha</label>
                         <input type="password" name="password" id="password" placeholder='Digite a sua senha' required/>
 
-                        <button>Criar Cadastro</button>
+                        <Button type="buttton" nome="Criar Cadastro"/>
 
                         <p>Já tem um cadastro? <Link href={'/login'}>Login</Link></p>
                     </form>
