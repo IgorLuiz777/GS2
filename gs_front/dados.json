@@ -1,27 +1,46 @@
 {
-    "usuario": [
-      {
-        "id": 1,
-        "nome": "Anibal",
-        "email": "anibal@gmail.com",
-        "cpf": "321.543.123-73",
-        "telefone": "11984737481",
-        "senha": "anibal1234",
-        "vacinas": "",
-        "plano_saude": "",
-        "contatos": ""
-      },
-      {
-        "id": 2,
-        "nome": "Ramon",
-        "email": "ramon@gmail.com",
-        "cpf": "543.323.135-72",
-        "telefone": "11973461974",
-        "senha": "ramondino",
-        "vacinas": "",
-        "plano_saude": "",
-        "contatos": ""
-      }
-    ]
-  }
-  
+  "usuario": [
+    {
+      "id": 1,
+      "nome": "Anibal",
+      "email": "anibal@gmail.com",
+      "cpf": "321.543.123-73",
+      "telefone": "11984737481",
+      "senha": "anibal1234",
+      "vacinas": "",
+      "plano_saude": "",
+      "contatos": ""
+    },
+    {
+      "id": 2,
+      "nome": "Ramon",
+      "email": "ramon@gmail.com",
+      "cpf": "543.323.135-72",
+      "telefone": "11973461974",
+      "senha": "ramondino",
+      "vacinas": "",
+      "plano_saude": "",
+      "contatos": ""
+    },
+    {
+      "nome": "Felipe Guedes",
+      "email": "felipecria@gmail.com",
+      "cpf": "324.424.747-22",
+      "telefone": "11973720482",
+      "senha": "criadafiap123",
+      "name": "s",
+      "phone": "s",
+      "password": "a",
+      "id": 3
+    },
+    {
+      "nome": "Felipe Guedes Cria",
+      "email": "felipecria2@gmail.com",
+      "cpf": "732.312.424-83",
+      "telefone": "11973639402",
+      "senha": "ocriadafiap",
+      "": "r",
+      "id": 4
+    }
+  ]
+}

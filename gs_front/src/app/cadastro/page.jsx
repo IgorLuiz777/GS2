@@ -4,11 +4,11 @@ import Link from "next/link";
 import "./cadastro.scss";
 
 export default function Cadastro() {
-  const [nome, setNome] = useState("");
-  const [email, setEmail] = useState("");
-  const [cpf, setCpf] = useState("");
-  const [telefone, setTelefone] = useState("");
-  const [senha, setSenha] = useState("");
+  //const [nome, setNome] = useState("");
+  //const [email, setEmail] = useState("");
+  //const [cpf, setCpf] = useState("");
+  //const [telefone, setTelefone] = useState("");
+  //const [senha, setSenha] = useState("");
 
   const [novo, setNovo] = useState({
     nome: "",
@@ -33,8 +33,11 @@ export default function Cadastro() {
       body: JSON.stringify(novo),
     }).then(() => {
       window.location = "/login";
+      console.log('Cliente criado com sucesso');
+    }).catch(error => {
+        console.error('Erro ao criar cliente', error);
     });
-  };
+};
 
   return (
     <main>
@@ -44,13 +47,14 @@ export default function Cadastro() {
         </div>
         <div className="form">
           <h3>Cadastro</h3>
-          <form action="">
-            <label htmlFor="name">Nome</label>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="nome">Nome</label>
             <input
               type="text"
-              name="name"
-              id="name"
+              name="nome"
               placeholder="Digite o seu nome"
+              value={novo.nome}
+              onChange={handleChange}
               required
             />
 
@@ -58,8 +62,9 @@ export default function Cadastro() {
             <input
               type="email"
               name="email"
-              id="email"
               placeholder="Digite o seu email"
+              value={novo.email}
+              onChange={handleChange}
               required
             />
 
@@ -67,30 +72,33 @@ export default function Cadastro() {
             <input
               type="text"
               name="cpf"
-              id="cpf"
               placeholder="Digite o seu cpf"
+              value={novo.cpf}
+              onChange={handleChange}
               required
             />
 
-            <label htmlFor="phone">Celular</label>
+            <label htmlFor="telefone">Celular</label>
             <input
               type="tel"
-              name="phone"
-              id="phone"
+              name="telefone"
               placeholder="Digite o seu número"
+              value={novo.telefone}
+              onChange={handleChange}
               required
             />
 
-            <label htmlFor="password">Senha</label>
+            <label htmlFor="senha">Senha</label>
             <input
               type="password"
-              name="password"
-              id="password"
+              name="senha"
               placeholder="Digite a sua senha"
+              value={novo.senha}
+              onChange={handleChange}
               required
             />
 
-            <button className="button">Cadastrar</button>
+            <button className="button" type="submit">Cadastrar</button>
 
             <p>
               Já tem um cadastro? <Link href={"/login"}>Login</Link>
