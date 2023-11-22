@@ -126,19 +126,3 @@
         font-size: 20px;
     }
 }
-
-.button {
-
-    button {
-        font-size: 20px;
-        background-color: orange;
-        cursor: pointer;
-        padding: 10px;
-        border-radius: 15px;
-        border: none;
-    }
-    button:hover {
-        background-color: $color1;
-        
-    }
-}

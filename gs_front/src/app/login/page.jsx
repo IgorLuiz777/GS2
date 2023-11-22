@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import "./login.scss";
-import Button from "@/components/button";
 
 export default function Login() {
     const [usuario, setUsuario] = useState([]);
@@ -62,9 +61,7 @@ export default function Login() {
                             required
                         />
 
-                        <button type="button" onClick={handleLogin}>Entrar</button>
-
-                        <Button type="button" nome="Entrar" onClick={handleLogin} />
+                        <button className="button" type="button" onClick={handleLogin}>Entrar</button>
 
                         <p>Não tem um cadastro?<Link href={"/cadastro"}> Cadastre-se</Link></p>
                     </form>

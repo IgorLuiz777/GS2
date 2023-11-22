@@ -12,6 +12,8 @@ export default function header() {
                         <div className="nav_links">
                             <li><Link href={'/'}>Home</Link></li>
                             <li><Link href={'/servicos'}>Serviços</Link></li>
+                            <li><Link href={'/cuidar'}>Cuide-se</Link></li>
+                            <li><Link href={'/perfil'}>Perfil</Link></li>
                             <li><Link href={'/contato'}>Contatate-nos</Link></li>
                         </div>
                         <li><Link href={'/login'} className={"login"}>Login</Link> <Link href={'/cadastro'} className={"cadastro"}>Cadastro</Link></li>                   
