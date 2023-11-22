@@ -7,20 +7,17 @@ export default function Perfil() {
     const [usuarioAutenticado, setUsuarioAutenticado] = useState(null);
 
     useEffect(() => {
-        // Obter detalhes do usuário do sessionStorage
         const usuarioSalvo = sessionStorage.getItem('usuarioAutenticado');
 
         if (usuarioSalvo) {
             setUsuarioAutenticado(JSON.parse(usuarioSalvo));
         } else {
-            // Usuário não autenticado, redirecionar para a página de login
             window.location.href = "/login";
         }
     }, []);
 
     if (!usuarioAutenticado) {
-        // Renderizar loading ou outra lógica enquanto os detalhes do usuário estão sendo carregados
-        return <div>Carregando...</div>;
+        return <div><h3>Carregando...</h3></div>;
     }
 
     return (

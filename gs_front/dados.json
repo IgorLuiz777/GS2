@@ -8,6 +8,7 @@
       "telefone": "11984737481",
       "senha": "anibal1234",
       "vacinas": "",
+      "estado_saude": "",
       "plano_saude": "",
       "contatos": ""
     },
@@ -19,6 +20,7 @@
       "telefone": "11973461974",
       "senha": "ramondino",
       "vacinas": "",
+      "estado_saude": "",
       "plano_saude": "",
       "contatos": ""
     },
@@ -28,9 +30,6 @@
       "cpf": "324.424.747-22",
       "telefone": "11973720482",
       "senha": "criadafiap123",
-      "name": "s",
-      "phone": "s",
-      "password": "a",
       "id": 3
     },
     {
