@@ -4,11 +4,6 @@ import Link from "next/link";
 import "./cadastro.scss";
 
 export default function Cadastro() {
-  //const [nome, setNome] = useState("");
-  //const [email, setEmail] = useState("");
-  //const [cpf, setCpf] = useState("");
-  //const [telefone, setTelefone] = useState("");
-  //const [senha, setSenha] = useState("");
 
   const [novo, setNovo] = useState({
     nome: "",

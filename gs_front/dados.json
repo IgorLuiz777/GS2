@@ -40,6 +40,14 @@
       "senha": "ocriadafiap",
       "": "r",
       "id": 4
+    },
+    {
+      "nome": "Artur",
+      "email": "artur@gmail.com",
+      "cpf": "652.324.213-73",
+      "telefone": "11973648364",
+      "senha": "arturmaluco",
+      "id": 5
     }
   ]
 }

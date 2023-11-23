@@ -15,6 +15,10 @@ export default function Perfil() {
             window.location.href = "/login";
         }
     }, []);
+    const deslogar = ()=> {
+        sessionStorage.removeItem("usuarioAutenticado")
+        setUsuarioAutenticado("")
+      }
 
     if (!usuarioAutenticado) {
         return <div><h3>Carregando...</h3></div>;
@@ -30,6 +34,7 @@ export default function Perfil() {
                     <p>CPF: {usuarioAutenticado.cpf}</p>
                     <p>Telefone celular{usuarioAutenticado.telefone}</p>
                     <p>Senha: {usuarioAutenticado.senha}</p>
+                    <button onClick={deslogar}>Deslogar</button>
                 </div>
             </div>
         </main>
