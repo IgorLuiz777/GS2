@@ -1,0 +1,69 @@
+@import '../variaveis.scss';
+
+
+.content_servicos {
+
+
+    img {
+        display: flex;
+        margin: auto;
+        width: 500px;
+    }
+    .texto02_servicos {
+        text-align: justify;
+        font-size: 30px;
+        font-weight: 600;
+        margin: 50px auto;
+        max-width: 700px;
+        a{
+            color: orange;
+        }
+    }
+
+    .servicos01 {
+        display: flex;
+        justify-content: space-evenly;
+        .texto_servicos {
+            margin: auto;
+            margin-left: 50px;
+            margin-right: 40px;
+            max-width: 800px;
+            h2 {
+                font-size: 30px;
+                font-weight: 800;
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+            p {
+                text-align: justify;
+                font-size: 28px;
+                font-weight: 700;
+            }
+        
+        }
+       
+        img {
+            background-color: $color1;
+            border-radius: 50px;
+            margin: 40px 50px 0 0;
+        }
+    }
+
+    .servicos02 {
+        margin-top: 100px;
+        padding-bottom: 5px;
+        background-color: $color1;
+
+        h3 {    
+            font-size: 35px;
+            text-align: center;
+        }
+
+        .cards {
+            padding: 5px;
+            margin: 50px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
