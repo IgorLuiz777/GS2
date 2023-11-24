@@ -1,0 +1,63 @@
+@import '../variaveis.scss';
+
+.content_cuidar {
+
+    img {
+        display: flex;
+        margin: auto;
+        width: 500px;
+    }
+    .h3_servicos {
+        text-align: justify;
+        font-size: 30px;
+        margin: 50px auto;
+        max-width: 800px;
+    }
+
+    .cuidar01 {
+        display: flex;
+        justify-content: space-evenly;
+        .texto_cuidar {
+            margin: auto;
+            margin-left: 50px;
+            margin-right: 40px;
+            max-width: 800px;
+            h2 {
+                font-weight: 800;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                font-size: 30px;
+            }
+            p {
+                text-align: justify;
+                font-size: 28px;
+                font-weight: 700;
+            }
+        
+        }
+       
+        img {
+            background-color: $color1;
+            border-radius: 40px;
+            margin: 40px 50px 0 0;
+        }
+    }
+    
+    .metas {
+        margin-top: 100px;
+        padding-bottom: 5px;
+        background-color: $color1;
+
+        h2 {    
+            font-size: 35px;
+            text-align: center;
+        }
+
+        .cards {
+            padding: 5px;
+            margin: 50px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}

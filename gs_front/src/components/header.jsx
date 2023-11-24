@@ -28,7 +28,6 @@ export default function header() {
                             <li><Link href={'/servicos'}>Serviços</Link></li>
                             <li><Link href={'/cuidar'}>Cuide-se</Link></li>
                             <li><Link href={'/perfil'}>Perfil</Link></li>
-                            <li><Link href={'/contato'}>Contatate-nos</Link></li>
                         </div>
                         <li> <p className="nome_usuario">Olá {usuarioAutenticado.nome}</p></li>
                     </ul>
@@ -48,7 +47,6 @@ export default function header() {
                             <li><Link href={'/servicos'}>Serviços</Link></li>
                             <li><Link href={'/cuidar'}>Cuide-se</Link></li>
                             <li><Link href={'/perfil'}>Perfil</Link></li>
-                            <li><Link href={'/contato'}>Contatate-nos</Link></li>
                         </div>
                         <li><Link href={'/login'} className={"login"}>Login</Link> <Link href={'/cadastro'} className={"cadastro"}>Cadastro</Link></li>
                     </ul>

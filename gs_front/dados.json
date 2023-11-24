@@ -7,10 +7,10 @@
       "cpf": "321.543.123-73",
       "telefone": "11984737481",
       "senha": "anibal1234",
-      "vacinas": "",
+      "vacinas": "Sim",
       "estado_saude": "",
-      "plano_saude": "",
-      "contatos": ""
+      "plano_saude": "Amil",
+      "contatos": "Ramon"
     },
     {
       "id": 2,
@@ -42,12 +42,52 @@
       "id": 4
     },
     {
-      "nome": "Artur",
+      "nome": "Artur2",
       "email": "artur@gmail.com",
-      "cpf": "652.324.213-73",
+      "cpf": "652.324.213-76",
       "telefone": "11973648364",
       "senha": "arturmaluco",
+      "vacinas": "sim",
+      "estado_saude": "Doente",
+      "plano_saude": "Amil",
+      "contatos": "Ramon",
       "id": 5
+    },
+    {
+      "nome": "Vini",
+      "email": "vini@gmail.com",
+      "cpf": "535.323.432-32",
+      "telefone": "11987463672",
+      "senha": "vinizika",
+      "id": 6
+    },
+    {
+      "nome": "Vini",
+      "email": "vini@gmail.com",
+      "cpf": "535.323.432-32",
+      "telefone": "11987463672",
+      "senha": "vinizika",
+      "id": 7
+    },
+    {
+      "nome": "Edineia",
+      "email": "edi@gmail.com",
+      "cpf": "732.323.343-12",
+      "telefone": "11976374894",
+      "senha": "edipesada",
+      "id": 8
+    },
+    {
+      "nome": "Limetes",
+      "email": "limetes@gmail.com",
+      "cpf": "323.431.231-31",
+      "telefone": "11987364821",
+      "senha": "prodecs",
+      "id": 9,
+      "contatos": "Ramon, Vini, Anibal",
+      "estado_saude": "Não",
+      "vacinas": "Não",
+      "plano_saude": "Prevent"
     }
   ]
 }

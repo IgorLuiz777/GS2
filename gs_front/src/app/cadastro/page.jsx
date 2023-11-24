@@ -63,7 +63,7 @@ export default function Cadastro() {
               required
             />
 
-            <label htmlFor="cpf">CPF</label>
+            <label htmlFor="cpf">CPF (formato: 123.456.789-10)</label>
             <input
               type="text"
               name="cpf"
