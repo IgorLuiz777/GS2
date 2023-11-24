@@ -1,0 +1,137 @@
+package br.com.vec.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.vec.entity.Usuario;
+
+public class UsuarioDao {
+	
+	private Connection conexao;
+	
+	public void inserir(Contato contato)  {
+
+		conexao = GerenciadorBd.obterConexao();
+		PreparedStatement comandoSQL = null;
+		try {
+			comandoSQL = conexao.prepareStatement("insert into contato (id_contato,nome_contato, celular_contato, email_contato, tipo) values(?,?,?,?,?)");
+			comandoSQL.setInt(1, contato.getId());
+			comandoSQL.setString(2, contato.getNome());
+			comandoSQL.setString(3, contato.getCelular());
+			comandoSQL.setString(4, contato.getEmail());
+			comandoSQL.setString(5, contato.getTipo().toString());
+
+			//insert into contato (id_contato,nome_contato, celular_contato, email_contato, tipo) values(4,'Ana','11578787878', 'ana@teste.com','amiga');
+
+			comandoSQL.executeUpdate();
+			conexao.close();
+			comandoSQL.close();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+	public void alterar(Usuario usuario) throws SQLException {
+		conexao = GerenciadorBd.obterConexao();
+		PreparedStatement comandoSql = null;
+		String sql = "update t_vec_usuario set nm_usuario = ?, nm_email = ?, nr_cpf = ?,"
+				+ "nr_telefone = ?, nr_senha = ?, st_vacina = ?, st_saude = ?,"
+				+ "nm_plano_saude = ?, nm_contatos = ?"
+				+ "where id_usuario = ?";
+		comandoSql = conexao.prepareStatement(sql);
+		comandoSql.setString(1, usuario.getNome());
+		comandoSql.setString(2, usuario.getEmail());
+		comandoSql.setString(3, usuario.getCpf());
+		comandoSql.setInt(4, usuario.getTelefone());
+		comandoSql.setString(5, usuario.getSenha());
+		comandoSql.setString(6, usuario.getVacinado());
+		comandoSql.setString(7, usuario.getSaudeStatus());
+		comandoSql.setString(8, usuario.getPlanoSaude());
+		comandoSql.setString(9, usuario.getContatos());
+		comandoSql.setInt(10, usuario.getId());
+		comandoSql.executeUpdate();
+		conexao.commit();
+		conexao.close();
+		comandoSql.close();
+	}
+	
+	public void excluir(int id) throws SQLException {
+		conexao = GerenciadorBd.obterConexao();
+		PreparedStatement comandoSql = null;
+		String sql = "delete from t_vec_usuario where id_usuario = ?";
+		comandoSql = conexao.prepareStatement(sql);
+		comandoSql.setInt(1, id);
+		comandoSql.executeUpdate();
+		conexao.close();
+		comandoSql.close();
+	}
+	
+	public List<Usuario> buscarUsuarios(){
+		List<Usuario> usuarios = new ArrayList<>();
+		conexao = GerenciadorBd.obterConexao();
+		PreparedStatement comandoSql = null;
+		
+		try {
+			String sql = "Select * from t_vec_usuario";
+			comandoSql = conexao.prepareStatement(sql);
+			ResultSet rs = comandoSql.executeQuery();
+			while (rs.next()) {
+				Usuario usuario = new Usuario();
+				usuario.setId(rs.getInt(1));
+				usuario.setNome(rs.getString(2));
+				usuario.setEmail(rs.getString(3));
+				usuario.setCpf(rs.getString(4));
+				usuario.setTelefone(rs.getInt(5));
+				usuario.setSenha(rs.getString(6));
+				usuario.setVacinado(rs.getString(7));
+				usuario.setSaudeStatus(rs.getString(8));
+				usuario.setPlanoSaude(rs.getString(9));
+				usuario.setContatos(rs.getString(10));
+				usuarios.add(usuario); 
+			}
+			
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return usuarios;
+	}
+	
+	public Usuario buscarUsuariosPorId(int id) {
+		Usuario usuario = new Usuario();
+		conexao = GerenciadorBd.obterConexao();
+		PreparedStatement comandoSql = null;
+		try {
+			String sql = "Select * from t_vec_usuario where id_usuario = ?";
+			comandoSql = conexao.prepareStatement(sql);
+			comandoSql.setInt(1, id);
+			ResultSet rs = comandoSql.executeQuery();
+			if(rs.next()) {
+				usuario.setId(rs.getInt(1));
+				usuario.setNome(rs.getString(2));
+				usuario.setEmail(rs.getString(3));
+				usuario.setCpf(rs.getString(4));
+				usuario.setTelefone(rs.getInt(5));
+				usuario.setSenha(rs.getString(6));
+				usuario.setVacinado(rs.getString(7));
+				usuario.setSaudeStatus(rs.getString(8));
+				usuario.setPlanoSaude(rs.getString(9));
+				usuario.setContatos(rs.getString(10));
+			}
+			
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return usuario;
+	}
+	
+	
+	
+	
+	
+
+}

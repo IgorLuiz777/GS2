@@ -32,7 +32,7 @@ export default function Perfil() {
     const handleSalvar = (e) => {
         e.preventDefault();
 
-        fetch(`http://localhost:5000/usuario/${usuarioAutenticado.id}`, {
+        fetch(`http://localhost:8080/WebApi/rest/usuario/${usuarioAutenticado.id}`, {
             method: "put",
             headers: {
                 "Content-Type": "application/json",
@@ -96,18 +96,20 @@ export default function Perfil() {
                         <input type="text" name="contatos" value={novoPerfil.contatos} onChange={handleChange} />
                         <br />
                         <label>Vacinado: </label>
-                        <select name="vacinas" value={novoPerfil.vacinas} onChange={handleChange}>
+                        <select name="vacinado" value={novoPerfil.vacinado} onChange={handleChange}>
+                            <option value="">Escolha uma opção</option>
                             <option value="Sim">Sim</option>
-                            <option value="Não">Não</option>
+                            <option value="Nao">Não</option>
                         </select>
                         <br />
                         <label>Plano de Saúde: </label>
-                        <input type="text" name="plano_saude" value={novoPerfil.plano_saude} onChange={handleChange} />
+                        <input type="text" name="planoSaude" value={novoPerfil.planoSaude} onChange={handleChange} />
                         <br />
                         <label>Estado de Saúde(doente): </label>
-                        <select name="estado_saude" value={novoPerfil.estado_saude} onChange={handleChange}>
+                        <select name="saudeStatus" value={novoPerfil.saudeStatus} onChange={handleChange}>
+                            <option value="">Escolha uma opção</option>
                             <option value="Sim">Sim</option>
-                            <option value="Não">Não</option>
+                            <option value="Nao">Não</option>
                         </select>
                         <br />
                     </>
@@ -118,12 +120,12 @@ export default function Perfil() {
                         <p>Telefone: <span>{usuarioAutenticado.telefone}</span></p>
                         <p>Senha: <span>*******</span></p>
                         <p>Amigos: <span>{usuarioAutenticado.contatos}</span></p>
-                        <p>Vacinado: <span>{usuarioAutenticado.vacinas}</span></p>
-                        <p>Plano de Saúde: <span>{usuarioAutenticado.plano_saude}</span></p>
-                        <p>Estado de Saúde(doente): <span>{usuarioAutenticado.estado_saude}</span></p>
+                        <p>Vacinado: <span>{usuarioAutenticado.vacinado}</span></p>
+                        <p>Plano de Saúde: <span>{usuarioAutenticado.planoSaude}</span></p>
+                        <p>Estado de Saúde(doente): <span>{usuarioAutenticado.saudeStatus}</span></p>
 
-                        {usuarioAutenticado.estado_saude === "sim" && (
-                        <p>É fortemente recomendado que você tome todos os cuidados indicados na página "Cuide-se". Todos os seus amigos foram notificados sobre o seu estado.</p>
+                        {usuarioAutenticado.saudeStatus === "Sim" && (
+                        <p>{usuarioAutenticado.nome} é fortemente recomendado que você tome todos os cuidados indicados na página "Cuide-se". Todos os seus amigos foram notificados sobre o seu estado.</p>
                     )}
                     </>
                 )}

@@ -10,7 +10,7 @@ export default function Login() {
     const [senha, setSenha] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:5000/usuario")
+        fetch("http://localhost:8080/WebApi/rest/usuario")
             .then((resposta) => resposta.json())
             .then((resposta) => setUsuario(resposta))
             .catch((error) => console.log(error));

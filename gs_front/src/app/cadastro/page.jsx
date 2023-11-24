@@ -20,7 +20,7 @@ export default function Cadastro() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:5000/usuario", {
+    fetch("http://localhost:8080/WebApi/rest/usuario", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -75,7 +75,7 @@ export default function Cadastro() {
 
             <label htmlFor="telefone">Celular</label>
             <input
-              type="tel"
+              type="text"
               name="telefone"
               placeholder="Digite o seu número"
               value={novo.telefone}
